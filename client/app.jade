@@ -1,0 +1,20 @@
+
+body
+	+chat
+template(name="users")
+	p Me: #{me}
+	p Others:
+	ul
+		each others
+			li
+				p=_id
+				p=agent
+				p=message
+
+template(name="chat")
+	form.message.form-inline
+		.form-group
+			label Message: 
+			input(type="text").message.form-control
+		button(type="submit").btn.btn-primary Submit
+	
